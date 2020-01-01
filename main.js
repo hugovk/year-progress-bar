@@ -5,8 +5,8 @@ window.onload = function onLoad() {
 
   function progress() {
     var now = new Date();
-    var start = new Date(now.getFullYear(), 0, 0);  // Start of this year
-    var end = new Date(now.getFullYear() + 1, 0, 0);  // End of this year
+    var start = new Date(now.getFullYear(), 0, 1);  // Start of this year
+    var end = new Date(now.getFullYear() + 1, 0, 1);  // End of this year
     var done = (now-start) / (end-start);
     document.getElementById("percent").innerHTML = done*100 + "%";
     return done;
