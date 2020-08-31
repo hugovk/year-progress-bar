@@ -8,13 +8,19 @@ window.onload = function onLoad() {
     var start = new Date(now.getFullYear(), 0, 1);  // Start of this year
     var end = new Date(now.getFullYear() + 1, 0, 1);  // End of this year
     var done = (now-start) / (end-start);
-    document.getElementById("percent").innerHTML = done*100 + "%";
+    var percentStr = (100.0 * done).toString();
+    if (done < 0.1) {
+      percentStr = percentStr.slice(0, 9);
+    } else {
+      percentStr = percentStr.slice(0, 10);
+    }
+    document.getElementById("percent").innerHTML = percentStr + "%";
     return done;
   }
 
   line.animate(progress());  // Number from 0.0 to 1.0
 
-  setInterval(update, 1000);
+  setInterval(update, 16);
 
   function update() {
     line.set(progress());
