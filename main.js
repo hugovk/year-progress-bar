@@ -20,10 +20,10 @@ window.onload = function onLoad() {
 
   line.animate(progress());  // Number from 0.0 to 1.0
 
-  setInterval(update, 16);
+  requestAnimationFrame(update);
 
   function update() {
     line.set(progress());
+    requestAnimationFrame(update);
   }
-
 };
