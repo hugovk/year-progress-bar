@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="dark light">
     <title>Year progress bar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body {
         color: #444;
-        background-color: #EEEEEE;
+        background-color: #EEE;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #EEE;
+          background-color: #444;
+        }
       }
       h1, p {
         text-align: center;
@@ -16,6 +23,11 @@
       .progress {
         background-color: lightgrey;
         height: 300px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .progress {
+          background-color: darkgrey;
+        }
       }
       .progress > svg {
         display: block;
