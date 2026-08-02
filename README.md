@@ -2,4 +2,4 @@
 
 Nowadays everything needs a progress bar.
 
-https://hugovk.github.io/year-progress-bar
+https://hugovk.dev/year-progress-bar
